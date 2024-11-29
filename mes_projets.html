@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes projets</title>
+	<style>
+		body{
+			background-color: WhiteSmoke;
+			padding-top: 30px;
+			margin: auto;
+		}
+		
+		h2{
+			text-align: center;
+		}
+		
+		table{
+			width: 90%;
+			margin: auto;
+			border: 1px solid LightBlue;
+			border-collapse: collapse;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);	
+		}
+		
+		th, td {
+		    padding: 12px;
+		    text-align: left;
+		    text-align: center;
+		    border: 1px solid #ddd;
+		}
+		
+		table tbody td{
+			height: 20px;
+		}
+
+		th{
+			height: 30px;
+			border-bottom: 2px solid LightBlue;
+			background-color: AliceBlue;	
+		}
+		
+		tr:hover{
+			background-color: lavender;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		 p{
+			margin-top: 30px ;
+			text-align: center;	
+		}
+
+		footer{
+	font-size: 18px;
+	color: #0015ff;
+	text-align: center;
+	margin-top: 50px;
+	background-color: AliceBlue;
+	background-repeat: no-repeat;
+	background-size:cover ;
+	height: 100px;
+	width: 100%;
+}
+		
+	</style>
+</head>
+<body>
+    <h2>Mes Projets</h2>
+	<table>
+        	<thead>
+		    <tr>
+		        <th>ID Projet</th>
+		        <th>Intitulé du projet</th>
+		        <th>Début</th>
+		        <th>Echéance</th>
+		        <th>Statut</th>
+		        <th>Détails</th>
+		    </tr>
+		</thead>
+		<tbody id="projects_table_body">
+		    <!-- Les projets seront insérés ici par JavaScript -->
+		</tbody>
+	</table>
+	<p>
+	Pour avoir des détails sur un projet en particulier ou le modifier, veuillez cliquer sur le lien <strong> "Editer" </strong> du projet concerné.
+	</p>
+ 
+    <script>
+        // Récupérer les projets depuis le localStorage
+        const projets = JSON.parse(localStorage.getItem('projets')) || [];
+
+        // Récupérer le corps du tableau
+        const tableBody = document.getElementById('projects_table_body');
+
+        // Ajouter chaque projet dans une ligne du tableau
+        projets.forEach(projet => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${projet.id}</td>
+                <td>${projet.intitule}</td>
+                <td>${projet.debut}</td>
+                <td>${projet.echeance}</td>
+                <td>${projet.statut}</td>
+                <td><a href="projet_${projet.id}.html"> Editer</a></td>
+            `;
+            tableBody.appendChild(tr); // sert à ajouter une nouvelle ligne (tr) dans le corps du tableau (tableBody).
+        });
+    </script>
+	   <footer>
+        © 2024 [HorizonProjet].Merci de nous faire confiance !
+    </footer>
+    
+</body>
+</html>
+

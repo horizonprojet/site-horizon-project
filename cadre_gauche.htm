@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadre Gauche - Diaporama avec couleur de fond</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;  /* Couleur de fond unie */
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Empêcher tout débordement */
+        }
+
+        /* Conteneur pour le diaporama */
+        .carousel-container {
+            position: absolute;  /* Positionner en absolu dans le cadre */
+            top: 0;
+            left: 0;
+            width: 100%; /* Laisser le carousel occuper toute la taille de l'iframe */
+            height: 100%;
+            overflow: hidden; /* Masquer les images qui ne sont pas visibles */
+        }
+
+        /* Les images du carousel */
+        .carousel-images {
+            display: flex;  /* Utiliser un flexbox pour aligner les images en ligne */
+            width: 600%; /* L'élément conteneur doit être 6 fois plus large pour contenir 6 images */
+            height: 100%;
+            transition: transform 1s ease-in-out; /* Transition fluide entre les images */
+        }
+
+        .carousel-images img {
+            width: 16.666%;  /* Chaque image occupe 1/6 de la largeur du conteneur (16.666%) */
+            height: 100%;
+            object-fit: cover; /* L'image est redimensionnée et coupée pour remplir le conteneur sans déformation */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Conteneur pour le carousel -->
+    <div class="carousel-container">
+        <div class="carousel-images">
+            <img src="images/picture5.webp" alt="Image d'arrière-plan">
+            <img src="images/img11.jpeg" alt="Image 1">
+            <img src="images/picture1.jpeg" alt="Image 2">
+            <img src="images/picture2.jpeg" alt="Image 3">
+            <img src="images/picture3.jpeg" alt="Image 4">
+            <img src="images/picture4.jpeg" alt="Image 5">
+        </div>
+    </div>
+
+    <script>
+        // Initialisation de l'index de l'image active
+        let currentIndex = 0;
+        const images = document.querySelector('.carousel-images');
+        const totalImages = document.querySelectorAll('.carousel-images img').length;
+        
+        // Largeur d'une image en pourcentage (puisqu'il y a 6 images et chacune prend 16.666%)
+    	const imageWidth = 100 / totalImages;
+
+        // Fonction pour changer l'image toutes les 4 secondes
+        function changeImage() {
+            // Calculer la nouvelle position du carousel
+            currentIndex = (currentIndex + 1) % totalImages; // Passer à l'image suivante, revenir à la première après la dernière
+            const offset = -currentIndex * imageWidth; // Décalage à appliquer pour montrer la bonne image
+
+            // Appliquer la transformation pour faire défiler les images
+            images.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Lancer le changement d'image toutes les 4 secondes
+        setInterval(changeImage, 5000);
+    </script>
+
+</body>
+</html>
+

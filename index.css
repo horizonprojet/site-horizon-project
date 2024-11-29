@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    background: no-repeat center center / cover url("images/img-header.jpeg");
+    background-color: #87CEFA;
+    margin: 0;
+    height: 90px;
+    padding: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 5px 5px 15px rgb(0,0,0,0.3);
+}
+
+header h1{
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+    	font-size: 20px;  
+	z-index: 1;
+}
+
+.main {
+    position: relative ;
+    margin-top: 100px;
+    text-align: justify;
+    width: 72%;
+}
+
+.connexion {
+    background: #F0F8FF;
+    width: 27%;
+    margin-top: 100px;
+    position: relative;
+}
+
+.footer{
+	width: 100%;
+	height: 90px;
+	background-color: #E6E6FA;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.form {
+   	margin: 10px 10px;
+	position: fixed;
+	border: 1px solid #ADD8E6;
+	text-align: center;
+	
+	background-color: azure;
+    	width: 350px;
+   	height: 300px;
+   	font-size: 16px;
+  	border-radius: 18px;
+   	box-shadow: 5px 5px 5px rgb(0,0,0,0.3);	
+}
+
+.inscription{
+	position: fixed;
+	font-size: 16px;
+	margin-top: 330px;
+	margin-left: 20px;
+}
+
+#error-message{
+	margin-top: 360px;
+	margin-left: 30px;
+	color: red;
+}
+.article{
+	display: flex;
+	align-items:center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	height: 400px;
+	margin-bottom: 30px;
+	border-radius: 15px;
+	clear: both;
+}
+
+.article:hover{
+	background-color: #DCDCDC;
+	background-color: Lavender;
+}
+
+.article-text{
+	font-size: 20px;
+	background-color: ;
+	width: 40%;
+	overflow: auto;
+	padding: 0 10px;
+	margin: 20px 5px;
+	border-radius: 25px;
+}
+
+.article-img1{
+	width: 58%;
+	margin: 20px 0px;
+	background-color: grey;
+	border-radius: 25px;
+	box-shadow: 5px 5px 10px rgb(0,0,0,0.5);
+	opacity: 0.86;
+}
+
+.article-img1:hover{
+	opacity: 1;
+}
+
+.article-img2{
+	width: 58%;
+	margin: 20px 0px;
+	background-color: grey;
+	border-radius: 25px;
+	box-shadow: 5px 5px 15px rgb(0,0,0,0.3);
+	opacity: 0.86;
+}
+
+.article-img2:hover{
+	opacity: 1;
+}
+
+.article-img3{
+	width: 58%;
+	margin: 20px 0px;
+	background-color: grey;
+	border-radius: 25px;
+	box-shadow: 5px 5px 15px rgb(0,0,0,0.5);
+	opacity: 0.86;
+}
+
+.article-img3:hover{
+	opacity: 1;
+}
+
+.article-img4{
+	width: 58%;
+	margin: 20px 0px;
+	background-color: grey;
+	border-radius: 25px;
+	box-shadow: 5px 5px 15px rgb(0,0,0,0.5);
+	opacity: 0.86;
+}
+
+.article-img4:hover{
+	opacity: 1;
+}
+
+.article-img5{
+	width: 50%;
+	height: 350px;
+	margin: 20px 0px;
+	background-color: grey;
+	border-radius: 25px;
+	box-shadow: 5px 5px 15px rgb(0,0,0,0.5);
+	opacity: 0.86;
+}
+
+.article-img5:hover{
+	opacity: 1;
+}
+
+input{
+	font-size: 17px;
+	width: 300px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 25px;
+	box-shadow: 5px 5px 5px rgb(0,0,0,0.3);
+}
+
+input[type="text"]:hover{
+	background-color: SeaShell;
+}
+
+input[type="password"]:hover{
+	background-color: #F5F5F5;
+}
+
+.user-icon, .password-icon {
+    position: relative; /* Nécessaire pour positionner l'icône à l'intérieur du champ */
+    margin-bottom: 20px; 
+}
+
+/* Icônes positionnées à droite dans le champ de texte */
+.user-icon i, .password-icon i {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%); /* Centrage vertical */
+    font-size: 20px;
+    color: dodgerblue;  
+    pointer-events: none;  /* Pour que l'icône ne gêne pas l'interaction avec le champ de texte */
+}
+
+/* Style des champs input */
+#idUserName, #idPassword {
+    padding-right: 30px;
+}
+
+#idUserName:focus, #idPassword:focus {
+    outline: none;
+    border: 2px solid #007bff;  /* Bordure personnalisée au focus */
+}
+
+#btnConnexion {
+    color: blue;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnConnexion:hover {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4169E1;
+    color: white;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un compte</title>
+  <link rel="stylesheet" href="inscription.css"> <!-- Lien vers CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>Formulaire d'Inscription</h1>
+  </header>
+  
+   <div class="main">
+    <form id="form-inscription">
+      <div class="titre"><h3>Créer un compte</h3></div>
+      
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" placeholder="1ère lettre en majuscule" required><br><br>
+      
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" placeholder="en majuscule ..." required><br><br>
+      
+       <label for="tel">Téléphone :</label>
+       <input type="tel" id="tel" name="tel" placeholder="Format: ##-###-##-##" required><br><br>
+       
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="nom-utilisateur">Nom d'utilisateur :</label>
+      <input type="text" id="nom-utilisateur" name="nom-utilisateur" required><br><br>
+   
+      <label for="motDePasse1">Mot de passe :</label>
+      <input type="password" id="motDePasse1" name="mot-de-passe1" minlength="8" required><br><br> <!-- Au moins 8 caractères -->
+      
+      <label for="motDePasse2">Confirmer le Mot de passe :</label>
+      <input type="password" id="motDePasse2" name="mot-de-passe2" minlength="8" required><br><br>
+
+      <button type="submit">S'inscrire</button>
+      <button type="reset">Annuler</button>
+    </form>
+    </div>
+
+  <script src="inscription.js" defer></script> <!-- Lien vers JavaScript -->
+</body>
+</html>

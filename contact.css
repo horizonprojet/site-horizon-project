@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+background-color:white;
+color: black;
+}
+
+.titre{
+    color: white;
+    margin: auto;
+    width: 90%;
+    margin-top: 20px;
+    padding: 10px 100px;
+    text-align: justify;
+    font-size: 20px;
+
+}
+.titre h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.principale{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+.gauche{
+    width: 30%;
+    height: 400px;
+    padding: 10px;
+    margin-right: 40px;
+    padding-top: 50px;
+    
+}
+.droite{
+    width: 35%;
+    height: 400px;
+    margin-left: 20px ;
+    padding: 50px 0 0 30px;
+    background-color: white;
+}
+.contact-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.icon{
+    margin-right: 15px;
+    margin-top: 10px;
+    width: 12%;
+    height: 35px;
+    padding: 8px 10px;
+    border-radius: 30px;
+}
+
+.address, .telephone, .email{
+    width: 80%;
+    margin-top: 10px;
+}
+
+h3{
+    color: black;
+    margin-bottom: 5px;
+}
+input{
+    width: 300px;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid;
+}
+textarea{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 15px;
+}
+#submit{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: darkcyan;
+    color:black;
+}
+
+footer{
+	font-size: 18px;
+	color: #0015ff;
+	text-align: center;
+	margin-top: 50px;
+	height: 100px;
+	width: 100%;
+    background-color: white;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un projet</title>
+    <link rel="stylesheet" type="text/css" href="nouveau_projet.css">
+</head>
+<body>
+	<!--
+	<header class="header">
+		<h2 id="titre">Ajout d'un nouveau projet !</h2>
+	</header>
+	-->
+    
+    <main class="form">
+    <form action="#" id="new_project_form" method="post">
+    
+    	<div class="titre"><h2>Ajout d'un nouveau projet !</h2></div>
+    	
+    	 <!-- Informations d'identification du projet -->
+        <fieldset name="identification" class="fieldset"> 
+            <legend><h3>Informations d'identification du projet</h3></legend>
+            <div class="identification">
+                <label for="id_projet">Identifiant du projet :</label><br>    
+                <input type="text" name="idprojet" id="id_projet" size="10"><br><br>
+                
+                <label for="id_intitule_projet">Intitulé du projet :</label><br>    
+                <input type="text" name="intitule_projet" id="id_intitule_projet" size="35"><br><br>
+                
+                <label for="id_date_debut">Date de démarrage :</label>    
+                <input type="date" name="date_debut" id="id_date_debut"><br><br>
+                
+                <label for="id_date_echeance">Date d'échéance :</label>    
+                <input type="date" name="date_echeance" id="id_date_echeance"><br><br>
+                
+                <label for="id_description">Description du projet :</label><br>
+                <textarea rows="8" cols="60" id="id_description" name="description"></textarea><br><br>    
+            </div>
+        </fieldset>
+    	
+    	<!-- Information sur l'équipe -->
+        <fieldset name="equipe" class="fieldset">
+            <legend><h3>Equipe</h3></legend>
+            <label for="id_chef_projet">Chef de projet :</label><br>    
+            <input type="text" name="id_chef_projet" id="id_chef_projet" size="10" placeholder="Id_Employé"> &nbsp
+            <input type="text" name="nom_chef_projet" size="35" placeholder="Prénom + Nom"><br><br>
+            
+            <label>Autres membres :</label><br>
+            <div id="collaborateurs">
+		<div class="collaborateur">
+		    <input type="text" name="id_employe1" size="10" placeholder="Id_Collaborateur1"> &nbsp
+		    <input type="text" name="nom_employe1" size="35" placeholder="Prénom + Nom"><br><br>
+		</div>
+    	    </div>
+    		<button type="button" id="ajouterCollaborateur">Ajouter un collaborateur</button><br><br>
+            
+        </fieldset>
+        
+        <fieldset name="taches" class="fieldset">
+            <legend><h3>Tâches à effectuer</h3></legend>
+            <table>
+                <tr>
+                    <th class="libelle">Tâches</th>
+                    <th>Durée (en mois)</th>
+                </tr>
+                <tr>
+                    <td class="libelle"><input type="text" name="tache1" size="35"></td>
+                    <td><input type="number" name="duree1" min="0" size="5" max="6"></td>
+                </tr>
+                <tr>
+                    <td class="libelle"><input type="text" name="tache2" size="35"></td>
+                    <td><input type="number" name="duree2" min="0" size="5" max="6"></td>
+                </tr>
+                <tr>
+                    <td class="libelle"><input type="text" name="tache3" size="35"></td>
+                    <td><input type="number" name="duree3" min="0" size="5" max="6"></td>
+                </tr>
+                <tr>
+                    <td class="libelle"><input type="text" name="tache4" size="35"></td>
+                    <td><input type="number" name="duree4" min="0" size="5" max="6"></td>
+                </tr>
+                <tr>
+                    <td class="libelle"><input type="text" name="tache5" size="35"></td>
+                    <td><input type="number" name="duree5" min="0" size="5" max="6"></td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <!-- Coût du projet -->
+        <fieldset name="cout" class="fieldset">
+            <legend><h3>Coût du projet</h3></legend>
+            <table>
+                <tr>
+                    <th class="libelle">Libellé</th>
+                    <th>Montant</th>
+                </tr>
+                <tr>
+                    <td class="libelle">Masse salariale</td>
+                    <td><input type="number" id="masseSalariale" name="salaires" min="0" size="10"></td>
+                </tr>
+                <tr>
+                    <td class="libelle">Matériel et logiciel</td>
+                    <td><input type="number" id="materiel" name="materiel" min="0" size="10"></td>
+                </tr>
+                <tr>
+                    <td class="libelle">Sous-traitance</td>
+                    <td><input type="number" id="sousTraitance" name="sous_traitance" min="0" size="10"></td>
+                </tr>
+                <tr>
+                    <td class="libelle">Frais divers</td>
+                    <td><input type="number" id="frais" name="divers" min="0" size="10"></td>
+                </tr>
+                <tr>
+                    <td class="libelle"><strong>Coût Total</strong></td>
+                    <td><input type="number" id="coutTotal" name="cout_total" min="0" size="10"></td>
+                </tr>
+            </table>
+        </fieldset><br>    
+
+        <div class="div-bouton">
+        <button type="submit" id="btn_ajouter_pj"><p class="bouton">Enregistrer</p></button>
+        <button type="reset" id="btn_annuler"><p class="bouton">Annuler</p></button>
+        </div>
+    </form>
+    </main>
+    
+    <script src="nouveau_projet.js"></script> 
+    <footer>
+        © 2024 [HorizonProjet].Merci de nous faire confiance !
+    </footer>
+</body>
+</html>
+
